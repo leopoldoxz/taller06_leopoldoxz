@@ -24,7 +24,6 @@ public class Problema2 {
         String propietario;
         int tipo;
         double avaluo;
-
         String descripcion = "";
         double porcentaje = 0; 
         double valorFijo = 0;
