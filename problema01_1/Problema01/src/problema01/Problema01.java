@@ -26,7 +26,7 @@ public class Problema01 {
         int opcion;
         String operacion = "";
         double resultado = 0;
-        boolean puedeCalcular = true;
+        boolean puedeCalcular = false;
 
         System.out.println("Ingrese el primer numero por favor");
         numero1 = entrada.nextDouble();
@@ -83,7 +83,7 @@ public class Problema01 {
                             operacion,
                             resultado);
                 } else {
-                    System.out.println("\nLa opción seleccionada no es válida.");
+                    System.out.println("\nLa opcion seleccionada no es valida.");
                 }
             }
         }
