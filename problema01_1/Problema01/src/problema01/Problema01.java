@@ -26,7 +26,7 @@ public class Problema01 {
         int opcion;
         String operacion = "";
         double resultado = 0;
-        boolean puedeCalcular = false;
+        boolean puedeCalcular = true;
 
         System.out.println("Ingrese el primer numero por favor");
         numero1 = entrada.nextDouble();
@@ -59,11 +59,19 @@ public class Problema01 {
                         } else {
                             if (opcion == 4) {
                                 operacion = "Division";
-                                resultado = numero1 / numero2;
+                                if (numero2 != 0) {
+                                    resultado = numero1 / numero2;
+                                } else {
+                                    puedeCalcular = false;
+                                }
                             } else {
                                 if (opcion == 5) {
                                     operacion = "Modulo";
-                                    resultado = numero1 % numero2;
+                                    if (numero2 != 0) {
+                                        resultado = numero1 % numero2;
+                                    } else {
+                                        puedeCalcular = false;
+                                    }
                                 } else {
                                     operacion = "Potencia";
                                     resultado = Math.pow(numero1, numero2);
@@ -72,6 +80,7 @@ public class Problema01 {
                         }
                     }
                 }
+
                 if (puedeCalcular) {
                     System.out.printf("\nOPERACIONES ARITMETICAS\n\n"
                             + "Primer numero: %.2f\n"
@@ -83,9 +92,17 @@ public class Problema01 {
                             operacion,
                             resultado);
                 } else {
-                    System.out.println("\nLa opcion seleccionada no es valida.");
+                    System.out.println("\nNo es posible realizar la operacion: "
+                            + "el segundo número no puede ser cero.");
                 }
+            } else {
+                System.out.println("\nNo es posible realizar la operacion: "
+                        + "el primer numero debe ser mayor que el segundo.");
             }
+        } else {
+            System.out.println("\nLa opcion seleccionada no es valida.");
         }
+
     }
+
 }

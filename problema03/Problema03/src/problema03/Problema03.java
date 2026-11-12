@@ -84,11 +84,11 @@ public class Problema03 {
         System.out.printf("\nREPORTE DE INCREMENTO SALARIAL\n\n"
                 + "Empleado: %s\n"
                 + "Tipo de empleado: %d\n"
-                + "Años de servicio: %d\n\n"
+                + "Anios de servicio: %d\n\n"
                 + "Sueldo inicial: $%.2f\n"
                 + "Porcentaje de incremento: %.0f%%\n"
                 + "Incremento salarial: $%.2f\n"
-                + "Bonificacion por antigüedad: $%.2f\n\n"
+                + "Bonificacion por antiguedad: $%.2f\n\n"
                 + "Nuevo sueldo: $%.2f\n",
                 empleado,
                 tipo,
